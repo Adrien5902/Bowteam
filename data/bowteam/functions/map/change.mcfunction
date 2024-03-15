@@ -1,0 +1,1 @@
+tellraw @p [{"text":"Cliquez ici pour ","color":"aqua","clickEvent":{"action":"suggest_command","value":"/scoreboard players set Map Settings "}},{"text":"Changer la map","color":"yellow","clickEvent":{"action":"suggest_command","value":"/scoreboard players set Map Settings"}}]

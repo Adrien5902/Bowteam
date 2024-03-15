@@ -1,0 +1,12 @@
+[
+  {
+    "function": "minecraft:set_count",
+    "count": {
+      "type": "minecraft:score",
+      "target": "this",
+      "score": "Kills",
+      "scale": 1
+    },
+    "add": false
+  }
+]
