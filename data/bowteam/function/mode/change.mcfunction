@@ -1,0 +1,1 @@
+tellraw @p [{"text":"Changer le mode : ","color":"aqua"},{"text":"[","color":"white"},{"text":"Normal","color":"gold","click_event":{"action":"run_command","command":"/function bowteam:mode/normal"}},{"text":"] [","color":"white"},{"text":"Deathmatch","color":"red","click_event":{"action":"run_command","command":"/function bowteam:mode/deathmatch"}},{"text":"]","color":"white"}]

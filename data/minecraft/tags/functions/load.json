@@ -1,6 +1,0 @@
-{
-    "replace": false,
-    "values": [
-        "bowteam:create/load", "cw_hp_control:init","random:load"
-    ]
-}

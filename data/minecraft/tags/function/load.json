@@ -1,0 +1,6 @@
+{
+    "replace": false,
+    "values": [
+        "bowteam:create/load","random:load"
+    ]
+}

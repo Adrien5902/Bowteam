@@ -1,5 +1,0 @@
-
-give @s polar_bear_spawn_egg{display:{Name:'{"text":"Spawn","color":"aqua"}'},EntityTag:{id:"minecraft:marker",Tags:["spawns"]}} 1
-give @s ocelot_spawn_egg{display:{Name:'{"text":"Spawn Lobby","color":"gold"}'},EntityTag:{id:"minecraft:armor_stand",NoGravity:1b,Silent:1b,Invulnerable:1b,Small:1b,Invisible:1b,Tags:["spawns","lobby"]}} 1
-give @s mooshroom_spawn_egg{display:{Name:'{"text":"Retirer le spawn le plus proche","color":"green"}'},EntityTag:{id:"minecraft:area_effect_cloud",ReapplicationDelay:10,Radius:0f,RadiusPerTick:0f,RadiusOnUse:0f,Duration:0,DurationOnUse:0f,Age:1,Tags:["killspawn"]}} 1
-give @s cave_spider_spawn_egg{display:{Name:'{"text":"Retirer tous les  spawns","color":"red"}'},EntityTag:{id:"minecraft:area_effect_cloud",ReapplicationDelay:10,Radius:0f,RadiusPerTick:0f,RadiusOnUse:0f,Duration:0,DurationOnUse:0f,Age:1,Tags:["killspawns"]}} 1

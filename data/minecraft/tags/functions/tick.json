@@ -1,6 +1,0 @@
-{
-    "replace": false,
-    "values": [
-        "bowteam:scripts/main", "cw_hp_control:main","random:main"
-    ]
-}
