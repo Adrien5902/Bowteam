@@ -11,3 +11,5 @@ scoreboard objectives setdisplay sidebar
 clear @a[tag=end]
 execute at @e[tag=lobby,limit=1] run spawnpoint @a[tag=end] ~ ~ ~
 tag @a[tag=end] remove end
+say test
+scoreboard players operation Map Settings = LastMap Settings

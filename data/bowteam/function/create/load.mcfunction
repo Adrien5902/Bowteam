@@ -78,7 +78,7 @@
 
 # Select Default Settings
     execute unless score Map Settings matches 0.. run scoreboard players set Map Settings 0
-    scoreboard players set WeaponCount Settings 8
+    scoreboard players set WeaponCount Settings 9
     execute unless score DeathMatchKillObjective Settings matches 0.. run scoreboard players set DeathMatchKillObjective Settings 30
     execute unless data storage bowteam Mode run data merge storage bowteam {Mode:"Normal"}
     execute unless data storage bowteam Weapon run data merge storage bowteam {Weapon:"Bow"}

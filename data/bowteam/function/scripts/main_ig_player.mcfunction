@@ -1,13 +1,13 @@
 ## Weapons
     # Bow
-        execute if data storage bowteam {CurrentWeapon:"Bow"} run item replace entity @s[nbt=!{SelectedItem:{id:"minecraft:bow"}}] hotbar.0 with bow[enchantments={infinity:1,power:1},unbreakable={},]
+        execute if data storage bowteam {CurrentWeapon:"Bow"} run item replace entity @s[nbt=!{SelectedItem:{id:"minecraft:bow"}}] hotbar.0 with bow[enchantments={infinity:1,power:255},unbreakable={},]
 
     # MachineGun
         execute if data storage bowteam {CurrentWeapon:"MachineGun"} run item replace entity @s[nbt=!{SelectedItem:{components:{"minecraft:charged_projectiles":[]}}}] hotbar.0 with crossbow[enchantments={infinity:1},unbreakable={}]
         execute if data storage bowteam {CurrentWeapon:"MachineGun"} run item replace entity @s hotbar.0 with crossbow[enchantments={infinity:1},unbreakable={}, charged_projectiles=[{id:"minecraft:arrow", count:1}]]
 
     # Crossbow
-        execute if data storage bowteam {CurrentWeapon:"Crossbow"} run item replace entity @s[nbt=!{Inventory:[{tag:{ChargedProjectiles:[{id:"minecraft:arrow"}, {}, {}]}}]}] hotbar.0 with crossbow[enchantments={infinity:1,quick_charge:3},unbreakable={}]
+        execute if data storage bowteam {CurrentWeapon:"Crossbow"} run item replace entity @s[nbt=!{Inventory:[{components:{"minecraft:charged_projectiles":[{id:"minecraft:arrow"}]}}]}] hotbar.0 with crossbow[enchantments={infinity:1,quick_charge:3},unbreakable={}]
 
     # Sword
         execute if data storage bowteam {CurrentWeapon:"Sword"} run item replace entity @s hotbar.0 with netherite_sword[enchantments={sharpness:2, knockback:1}, unbreakable={}]
@@ -23,9 +23,14 @@
         execute if data storage bowteam {CurrentWeapon:"Mace"} run item replace entity @s hotbar.0 with mace[unbreakable={}]
         execute if data storage bowteam {CurrentWeapon:"Mace"} run item replace entity @s hotbar.1 with wind_charge
 
-    # Shied and Arrow
-        execute if data storage bowteam {Shield:1b} run item replace entity @s[nbt=!{Inventory:[{id:"minecraft:shield"}]}] weapon.offhand with shield[unbreakable={}]
-        item replace entity @s inventory.0 with arrow 1
+    # Bazooka
+        execute if data storage bowteam {CurrentWeapon:"Bazooka"} run item replace entity @s[nbt=!{Inventory:[{id:"minecraft:crossbow"}]}] hotbar.0 with crossbow[tooltip_display={hidden_components:["charged_projectiles"]},custom_name={"color":"red","italic":false,"text":"Bazooka"},unbreakable={},enchantments={quick_charge:3}] 1
+        execute if data storage bowteam {CurrentWeapon:"Bazooka"} run item replace entity @s weapon.offhand with firework_rocket[fireworks={flight_duration:3,explosions:[{shape:"large_ball",has_twinkle:true,has_trail:true,colors:[16711680],fade_colors:[16711680]}]}] 1
+
+
+# Shied and Arrow
+    execute if data storage bowteam {Shield:1b} unless data storage bowteam {CurrentWeapon:"Bazooka"} run item replace entity @s[nbt=!{Inventory:[{id:"minecraft:shield"}]}] weapon.offhand with shield[unbreakable={}]
+    item replace entity @s inventory.0 with arrow 1
 
 
 # Kill Counter

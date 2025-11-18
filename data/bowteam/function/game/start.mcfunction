@@ -1,3 +1,4 @@
+scoreboard players operation LastMap Settings = Map Settings
 execute if score Map Settings matches -1 run function bowteam:scripts/random_map
 
 scoreboard objectives setdisplay sidebar Game
@@ -20,6 +21,7 @@ execute if data storage bowteam {Weapon:"Trident",Mode:"Normal"} run scoreboard 
 execute if data storage bowteam {Weapon:"Sniper",Mode:"Normal"} run scoreboard objectives modify Game displayname [{"text":"Bowteam","color":"gold"},{"text":" - ","color":"white"},{"text":"Sniper","color":"gold"}]
 execute if data storage bowteam {Weapon:"SpaceSnipers",Mode:"Normal"} run scoreboard objectives modify Game displayname [{"text":"Bowteam","color":"gold"},{"text":" - ","color":"white"},{"text":"SpaceSnipers","color":"blue"}]
 execute if data storage bowteam {Weapon:"Mace",Mode:"Normal"} run scoreboard objectives modify Game displayname [{"text":"Bowteam","color":"gold"},{"text":" - ","color":"white"},{"text":"Mace","color":"aqua"}]
+execute if data storage bowteam {Weapon:"Bazooka",Mode:"Normal"} run scoreboard objectives modify Game displayname [{"text":"Bowteam","color":"gold"},{"text":" - ","color":"white"},{"text":"Bazooka","color":"red"}]
 execute if data storage bowteam {Weapon:"Random",Mode:"Normal"} run scoreboard objectives modify Game displayname [{"text":"Bowteam","color":"gold"},{"text":" - ","color":"white"},{"text":"Random","color":"light_purple"}]
 
 execute if data storage bowteam {Weapon:"Bow",Mode:"Deathmatch"} run scoreboard objectives modify Kills displayname [{"text":"Deathmatch","color":"red"},{"text":" - ","color":"white"},{"text":"Bow","color":"gold"}]
@@ -30,6 +32,7 @@ execute if data storage bowteam {Weapon:"Trident",Mode:"Deathmatch"} run scorebo
 execute if data storage bowteam {Weapon:"Sniper",Mode:"Deathmatch"} run scoreboard objectives modify Kills displayname [{"text":"Deathmatch","color":"red"},{"text":" - ","color":"white"},{"text":"Sniper","color":"gold"}]
 execute if data storage bowteam {Weapon:"SpaceSnipers",Mode:"Deathmatch"} run scoreboard objectives modify Kills displayname [{"text":"Deathmatch","color":"red"},{"text":" - ","color":"white"},{"text":"SpaceSnipers","color":"blue"}]
 execute if data storage bowteam {Weapon:"Mace",Mode:"Deathmatch"} run scoreboard objectives modify Kills displayname [{"text":"Deathmatch","color":"red"},{"text":" - ","color":"white"},{"text":"Mace","color":"aqua"}]
+execute if data storage bowteam {Weapon:"Bazooka",Mode:"Deathmatch"} run scoreboard objectives modify Kills displayname [{"text":"Deathmatch","color":"red"},{"text":" - ","color":"white"},{"text":"Bazooka","color":"red"}]
 execute if data storage bowteam {Weapon:"Random",Mode:"Deathmatch"} run scoreboard objectives modify Kills displayname [{"text":"Deathmatch","color":"red"},{"text":" - ","color":"white"},{"text":"Random","color":"light_purple"}]
 
 data merge storage bowteam {SpaceBoost:0b}
