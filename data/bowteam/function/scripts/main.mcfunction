@@ -12,7 +12,7 @@
 
 # In-game spawns
     execute as @e[tag=spawns,tag=!lobby,sort=random] at @s if score @s Maps = Map Settings unless entity @a[distance=..3] run tp @a[sort=random,limit=1,tag=asnotspawn] ~ ~ ~
-    execute as @e[tag=spawns,tag=!lobby,sort=random] at @s if score @s Maps = Map Settings unless entity @a[distance=..10] run spawnpoint @a[limit=1,sort=random] ~ ~ ~
+    execute as @e[tag=spawns,tag=!lobby,sort=random] at @s if score @s Maps = Map Settings unless entity @a[distance=..10] run spawnpoint @a[limit=1,sort=random,tag=in-game] ~ ~ ~
     execute as @a[tag=asnotspawn] at @s if entity @e[limit=1,distance=..2,tag=spawns,tag=!lobby] run tag @s remove asnotspawn
 
 # Tag map spawns
