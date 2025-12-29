@@ -83,3 +83,4 @@
     execute unless data storage bowteam Mode run data merge storage bowteam {Mode:"Normal"}
     execute unless data storage bowteam Weapon run data merge storage bowteam {Weapon:"Bow"}
     execute unless data storage bowteam Shield run data merge storage bowteam {Shield:1b}
+    scoreboard objectives modify Game numberformat blank
