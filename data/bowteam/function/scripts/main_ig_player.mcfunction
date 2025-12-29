@@ -25,12 +25,11 @@
 
     # Bazooka
         execute if data storage bowteam {CurrentWeapon:"Bazooka"} run item replace entity @s[nbt=!{Inventory:[{id:"minecraft:crossbow"}]}] hotbar.0 with crossbow[tooltip_display={hidden_components:["charged_projectiles"]},custom_name={"color":"red","italic":false,"text":"Bazooka"},unbreakable={},enchantments={quick_charge:3}] 1
-        execute if data storage bowteam {CurrentWeapon:"Bazooka"} run item replace entity @s weapon.offhand with firework_rocket[fireworks={flight_duration:3,explosions:[{shape:"large_ball",has_twinkle:true,has_trail:true,colors:[16711680],fade_colors:[16711680]}]}] 1
+        execute if data storage bowteam {CurrentWeapon:"Bazooka"} run function bowteam:scripts/tag_firework
 
-
-# Shied and Arrow
-    execute if data storage bowteam {Shield:1b} unless data storage bowteam {CurrentWeapon:"Bazooka"} run item replace entity @s[nbt=!{Inventory:[{id:"minecraft:shield"}]}] weapon.offhand with shield[unbreakable={}]
-    item replace entity @s inventory.0 with arrow 1
+    # Shied and Arrow
+        execute if data storage bowteam {Shield:1b} unless data storage bowteam {CurrentWeapon:"Bazooka"} run item replace entity @s[nbt=!{Inventory:[{id:"minecraft:shield"}]}] weapon.offhand with shield[unbreakable={}]
+        item replace entity @s inventory.0 with arrow 1
 
 
 # Kill Counter
