@@ -45,7 +45,7 @@
     execute as @s[scores={KillSound=1..,Ace=..4}] run title @s actionbar [{"text":"\u2620x"},{"score":{"name":"@s","objective":"Ace"}}]
     execute as @s[scores={KillSound=1..,HeadShot=1..}] run title @s actionbar [{"text":"\u2620x"},{"score":{"name":"@s","objective":"Ace"}},{"text":" Headshot","color": "red"}]
     execute as @s[scores={KillSound=1..,Ace=5..}] run title @s actionbar [{"text":"\u2620x",color:"gold"},{"score":{"name":"@s","objective":"Ace"},color:"gold"}]
-    execute as @s[scores={KillSound=1..,HeadShot=1..}] run title @s actionbar [{"text":"\u2620x",color:"gold"},{"score":{"name":"@s","objective":"Ace"}},{"text":" Headshot","color": "red"}]
+    execute as @s[scores={KillSound=1..,HeadShot=1..,Ace=5..}] run title @s actionbar [{"text":"\u2620x",color:"gold"},{"score":{"name":"@s","objective":"Ace"}},{"text":" Headshot","color": "red"}]
     execute as @s[scores={Ace=5..,KillSound=1..}] at @s run playsound entity.player.levelup player @s ~ ~ ~ 1 1
     execute as @s[scores={Death=1..}] run scoreboard players set @s Ace 0
 
