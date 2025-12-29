@@ -3,3 +3,6 @@ give @s ocelot_spawn_egg[entity_data={id:"minecraft:marker",Tags:["lobby"]},cust
 
 give @s mooshroom_spawn_egg[entity_data={id:"minecraft:marker",Tags:["killspawn"]},custom_name={text:"Kill close spawn",color:"red",italic:false}] 1
 give @s cave_spider_spawn_egg[entity_data={id:"minecraft:marker",Tags:["killspawns"]},custom_name={text:"Kill all spawns",color:"dark_red",italic:false}] 1
+
+give @s witch_spawn_egg[entity_data={id:"minecraft:armor_stand",Tags:["potion_spawner","potion_spawner_first_spawn"],Invisible:1b,Invulnerable:1b,NoGravity:1b,Marker:1b},custom_name={text:"Potion Spawner",color:"green",italic:false}] 1
+give @s strider_spawn_egg[entity_data={id:"marker",Tags:["potion_spawner_remover"]},custom_name={text:"Potion Spawner Remover",color:"red",italic:false}] 1

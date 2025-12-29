@@ -23,6 +23,7 @@
     scoreboard objectives add HeadShot dummy
     scoreboard objectives add WeaponCooldown dummy
     scoreboard objectives add SniperShoot minecraft.dropped:minecraft.spyglass
+    scoreboard objectives add PotionTimer dummy
     scoreboard objectives modify Game displayname {"text": "Bowteam","bold": true,"color": "gold"}
     scoreboard objectives add KilledByRouge killedByTeam.red
     scoreboard objectives add KilledByBleu killedByTeam.blue
@@ -84,3 +85,5 @@
     execute unless data storage bowteam Weapon run data merge storage bowteam {Weapon:"Bow"}
     execute unless data storage bowteam Shield run data merge storage bowteam {Shield:1b}
     scoreboard objectives modify Game numberformat blank
+    # 300t = 20t/s * 15s 
+        execute unless score PotionResetTime Settings matches 0.. run scoreboard players set PotionResetTime Settings 1200

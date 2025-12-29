@@ -44,3 +44,8 @@ execute if data storage bowteam {Weapon:"SpaceSnipers"} run data merge storage b
     scoreboard players reset @a KillSound
 
 scoreboard players reset @a Death
+
+
+# Potions
+    execute as @e[tag=potion_spawner] at @s run function bowteam:scripts/potions/main
+    execute as @e[tag=potion_spawner_remover] at @s run function bowteam:scripts/potions/remove
