@@ -16,6 +16,14 @@ execute if data storage bowteam {Mode:"Normal"} unless score Players Settings ma
 execute if data storage bowteam {Mode:"Normal"} unless score Players Settings matches 0 if score Blanc Settings = Players Settings run title @a[tag=in-game] subtitle [{"text": "L'équipe ","color": "white"},{"text": "Blanc","color": "white"},{"text": " a gagné"}] 
 execute if data storage bowteam {Mode:"Normal"} unless score Players Settings matches 0 if score Gris Settings = Players Settings run title @a[tag=in-game] subtitle [{"text": "L'équipe ","color": "white"},{"text": "Gris","color": "dark_gray"},{"text": " a gagné"}] 
 
+scoreboard players set #max Kills 0
+execute as @a if score @s Kills > #max Kills run scoreboard players operation #max Kills = @s Kills
+execute as @a if score @s Kills = #max Kills run tag @s add max_kills
+
+execute if data storage bowteam {Mode:"Normal"} run title @a actionbar [{selector:"@a[tag=max_kills]",color:"white"},{text:" a fait le plus de kills (",color:"white"},{score:{name:"@a[tag=max_kills]",objective:Kills},color:"white"},{text:"x\u2620)",color:"white"}]
+
+tag @a remove max_kills
+
 title @a[tag=in-game] title {"text": "GG","color": "green"}
 
 tag @a[tag=in-game] add end
