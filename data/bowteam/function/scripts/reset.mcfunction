@@ -12,3 +12,4 @@ clear @a[tag=end]
 execute at @e[tag=lobby,limit=1] run spawnpoint @a[tag=end] ~ ~ ~
 tag @a[tag=end] remove end
 scoreboard players operation Map Settings = LastMap Settings
+execute as @e[tag=potion_spawner] at @s run function bowteam:scripts/potions/reset
